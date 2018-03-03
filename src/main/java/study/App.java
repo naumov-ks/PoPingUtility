@@ -49,38 +49,6 @@ public class App {
 		
 		WriterResult writer=new WriterResult();
 		writer.writeResultXls("fotoradars.xls", finishList);
-		/*
-		//Записываем результат в файл
-		 HSSFWorkbook resultXls = new HSSFWorkbook();
-	     HSSFSheet sheet = resultXls.createSheet("Фоторадары");
-        // Нумерация начинается с нуля
-	     for(int i=0;i<finishList.size();i++) {
-	    UnitDevice unit=finishList.get(i);
-	    HSSFRow row = sheet.createRow(i);
-	    HSSFCell number=row.createCell(0);
-	    number.setCellValue(unit.getNumber());
-	    HSSFCell name=row.createCell(1);
-	    name.setCellValue(unit.getName());
-	    
-	    ArrayList<IpAddress> ipList=unit.getIpList();
-	    for(int i1=0;i1<7;i1++){
-	    	HSSFCell ip=row.createCell(i1+2);
-	    	ip.setCellValue(ipList.get(i1).getAddress());
-	    	HSSFCell answer=row.createCell(i1+9);
-	    	answer.setCellValue(ipList.get(i1).getAnswer());
-    	    	}
-	    		
-	     }
-	     
-	     for(int i=1;i<16;i++) {
-	    	 sheet.autoSizeColumn(i);
-	     }
-		
-		File resultFile=new File("result_"+pathFile);
-		OutputStream out= new FileOutputStream(resultFile);
-		resultXls.write(out);
-		resultXls.close();
-*/
 		
 		long estimatedTime = System.currentTimeMillis() - startTime;
 		System.out.println(
