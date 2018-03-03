@@ -2,9 +2,7 @@ package study;
 
 import java.util.ArrayList;
 
-import work.IpAddress;
-
-public class UnitDevice {
+public class UnitDevice implements Comparable<UnitDevice>{
 	private int number;
 	private String name;
 	private ArrayList<IpAddress> ipList=new ArrayList<IpAddress>();
@@ -38,6 +36,12 @@ public class UnitDevice {
 
 	public void setIpList(ArrayList<IpAddress> ipList) {
 		this.ipList = ipList;
+	}
+
+	public int compareTo(UnitDevice other) {
+		if(other.number==this.number)return 0;
+		else if(other.number>this.number)return -1;
+		else return 1;
 	}
 
 

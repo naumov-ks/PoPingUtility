@@ -34,7 +34,7 @@ public class ThreadIpPing implements Callable<TaskOne> {
 	}
 
 	public IpAddress poPing(IpAddress ipPing) throws IOException {
-		/*
+		
 		String ip = ipPing.getAddress();
 		int answer = 0;
 		System.out.println("Начал пинговать "+ip);
@@ -51,7 +51,7 @@ public class ThreadIpPing implements Callable<TaskOne> {
 			ipPing.setAnswer(answer);
 		}
 		System.out.println("Закончил пинговать "+ip);
-		*/
+		
 		return ipPing;
 	}
 

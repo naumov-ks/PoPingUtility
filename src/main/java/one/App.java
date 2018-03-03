@@ -31,9 +31,9 @@ import work.TaskOne;
 import work.ThreadIpPing;
 
 public class App {
-
+	/*
 	public static void main(String[] args) throws FileNotFoundException, IOException, InterruptedException, ExecutionException {
- /*      
+       
 		Workbook book = new HSSFWorkbook();
         Sheet sheet = book.createSheet("Фоторадары");
         // Нумерация начинается с нуля
@@ -54,7 +54,7 @@ public class App {
         }
             
         myExcelBook.close();
-*/      
+     
 		
 		
 		ReaderTaskList ex=new ReaderTaskList("taskfile.xls");
@@ -72,12 +72,12 @@ public class App {
 		}
 
 		
-			/*
+
 		for(int i = 0; i < ipList.size(); i++){
 			Future<TaskOne> z = es.submit(new ThreadIpPing(ipList, i));
 			future.add(z);
 		}
-		*/
+
 		
 		ArrayList<TaskOne> finishList=new ArrayList<TaskOne>();
 		for (int i = 0; i < future.size(); i++) {
@@ -96,5 +96,5 @@ public class App {
         System.out.println("The end");
 		
 	}
-
+		*/
 }
