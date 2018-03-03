@@ -49,7 +49,7 @@ public class App {
 		
 		WriterResult writer=new WriterResult();
 		writer.writeResultXls("fotoradars.xls", finishList);
-		
+//		
 		long estimatedTime = System.currentTimeMillis() - startTime;
 		System.out.println(
 				"Работа программы завершена в " + estimatedTime / 1000 + "c.");	
