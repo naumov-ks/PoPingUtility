@@ -33,18 +33,18 @@ public class App {
 		for(int i=0;i<size;i++){
 			Future<UnitDevice> z = es.submit(new ThreadPing(unitList));
 			future.add(z);
-			System.out.println("размер future "+future.size());
+			//System.out.println("размер future "+future.size());
 		}
 		
 		ArrayList<UnitDevice> finishList=new ArrayList<UnitDevice>();
 		for (int i = 0; i < future.size(); i++) {
-		System.out.println(future.size()+" i="+i);
+		//System.out.println(future.size()+" i="+i);
 		UnitDevice	result=future.get(i).get();
 			finishList.add(result);
 			System.out.println("Размер выполнения "+future.size());
 		}
 		es.shutdown();
-		System.out.println("Закончили пинг всех устройств"+future.size());
+		System.out.println("Закончили пинг всех "+future.size()+" узлов.");
 		finishList.sort(null);
 		
 		WriterResult writer=new WriterResult();

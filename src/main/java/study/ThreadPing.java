@@ -53,8 +53,10 @@ public class ThreadPing implements Callable<UnitDevice> {
 				ipPing.setAnswer(1);
 			} else
 				ipPing.setAnswer(0);
-		} else
+		} else {
 			System.out.println("Пингуешь пустую строку!");
+		return;
+		}
 		System.out.println(Thread.currentThread().getName() + " закончил пинговать " + ip+"с результатом answer "+ answer);
 		return;
 	}
